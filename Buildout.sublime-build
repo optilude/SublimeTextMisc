@@ -1,0 +1,4 @@
+{
+    "cmd": ["bin/buildout"],
+    "working_dir": "${project_path:${folder}}",
+}

@@ -1,0 +1,5 @@
+{
+    "cmd": ["bin/develop", "rebuild"],
+    "working_dir": "${project_path:${folder}}",
+    "selector": "source.python"
+}

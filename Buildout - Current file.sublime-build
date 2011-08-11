@@ -1,0 +1,5 @@
+{
+    "cmd": ["bin/buildout", "-c", "$file"],
+    "selector": "source.buildout",
+    "working_dir": "${project_path:${folder}}"
+}
