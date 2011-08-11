@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>schema.Bytes(
+    __name__ = '$1',
+    ${2:title = ${3:u'$4'},}
+    ${5:description = ${6:u'$7'},}
+    ${8:required = ${9:True},}
+    ${10:readonly = ${11:False},}
+    ${12:default = ${13:None},}
+    ${14:missing_value = ${15:None},}
+    ${16:order = ${17:0},}
+    ${18:constraint = ${19:my_constraint_callable},}
+    ${20:min = ${21:0},}
+    ${22:max = ${23:1},}
+    ${24:min_length = ${25:0},}
+    ${26:max_length = ${27:0},}
+    ${28:value_type = ${29:None},}
+    ${30:unique = ${31:False}}
+)</string>
+	<key>name</key>
+	<string>Schema: Bytes</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>tabTrigger</key>
+	<string>schema</string>
+	<key>uuid</key>
+	<string>E169815A-3969-4BAA-9679-ED0669B625D3</string>
+</dict>
+</plist>

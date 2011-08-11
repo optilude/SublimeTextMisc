@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>atapi.ImageField(
+    '$1',
+    required=${2:False},
+    storage=atapi.AnnotationStorage(),
+    widget=atapi.ImageWidget(
+        label=_(u"$3"),
+        description=_(u"$4")
+    ),
+),</string>
+	<key>name</key>
+	<string>AT Fields Image</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>tabTrigger</key>
+	<string>atf</string>
+	<key>uuid</key>
+	<string>42141CFE-295E-44D1-BF16-ECADB0089630</string>
+</dict>
+</plist>

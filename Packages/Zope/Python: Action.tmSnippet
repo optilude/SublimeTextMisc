@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>@action('$1'${2:,validator=$3})
+def ${4:action_method}(${5:self,} action, data):
+     ${6:pass}</string>
+	<key>name</key>
+	<string>Python: Action</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>tabTrigger</key>
+	<string>@act</string>
+	<key>uuid</key>
+	<string>FBC8C5D8-6BF2-4E91-AD88-CCD97FAB9B8D</string>
+</dict>
+</plist>

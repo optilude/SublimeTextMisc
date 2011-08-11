@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#!/usr/bin/env python
+import os
+import subprocess
+tm_file = os.environ['TM_FILEPATH']
+
+pyflakes_cmd = '%s %s' % ('pyflakes', tm_file)
+out = subprocess.Popen(pyflakes_cmd,
+                       shell=True,
+                       stdout=subprocess.PIPE,
+                       stderr=subprocess.PIPE).communicate()
+if not out[1].find('command not found') &gt; 0:
+    if out[0]:
+        out = ''.join(out[0])
+    else:
+        out = ''.join(out[1])
+    out = out.replace('%s:' % tm_file, '')
+    print out
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>Pyflakes on save</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>uuid</key>
+	<string>D444F486-B185-4866-83C9-C19DB24D85B1</string>
+</dict>
+</plist>

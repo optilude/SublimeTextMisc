@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveModifiedFiles</string>
+	<key>captureFormatString</key>
+	<string>Line $2 in $1</string>
+	<key>capturePattern</key>
+	<string>^\s*File "(.+)", line (\d+)</string>
+	<key>command</key>
+	<string>TPY=${TM_PYTHON:-pythonw}
+
+"$TPY" "$TM_SUPPORT_PATH/../Bundles/Python.tmbundle/Support/pymate.py" "$TM_PROJECT_DIRECTORY/tests/runalltests.py"
+</string>
+	<key>fileCaptureRegister</key>
+	<string>1</string>
+	<key>input</key>
+	<string>document</string>
+	<key>keyEquivalent</key>
+	<string>~@R</string>
+	<key>lineCaptureRegister</key>
+	<string>2</string>
+	<key>name</key>
+	<string>Run All Tests</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>uuid</key>
+	<string>A74DC8DD-1A3B-454C-8E4C-C36208374D8A</string>
+</dict>
+</plist>

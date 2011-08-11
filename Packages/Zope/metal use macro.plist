@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;metal:${1:block} metal:use-macro="context/@@${2:macrotemplate}/${3:macroname}"&gt;
+    ${0:$TM_SELECTED_TEXT}
+&lt;/metal:$1&gt;</string>
+	<key>name</key>
+	<string>metal:use-macro</string>
+	<key>scope</key>
+	<string>text.html.zpt</string>
+	<key>tabTrigger</key>
+	<string>talum</string>
+	<key>uuid</key>
+	<string>42F36A2D-E9B9-43EC-806E-7D7FCECB4DE2</string>
+</dict>
+</plist>

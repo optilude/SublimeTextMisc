@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>TPY=${TM_PYTHON:-pythonw}
+
+pbpaste | grep -v '^(Pdb) ' |\
+"$TPY" -c 'import sys; print eval(sys.stdin.read())'</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^~@P</string>
+	<key>name</key>
+	<string>DocTest: browser.contents preview</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>uuid</key>
+	<string>CC1181C7-E2FF-4EF1-BD42-E71BB0350D0B</string>
+</dict>
+</plist>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>TPY=${TM_PYTHON:-pythonw}
+
+cat &lt;&lt;EOF
+&lt;html&gt;&lt;head&gt;
+&lt;script type="text/javascript"&gt;
+document.body.style.backgroundColor = "red";
+&lt;/script&gt;
+EOF
+
+"$TPY" "$TM_SUPPORT_PATH/../Bundles/Python.tmbundle/Support/pymate.py" "$TM_PROJECT_DIRECTORY/tests/testDocTests.py" "$TM_FILEPATH"
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>@r</string>
+	<key>name</key>
+	<string>Run current doctest</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>text.restructuredtext</string>
+	<key>uuid</key>
+	<string>4C370F34-FF4A-4430-AF3B-B671A5572231</string>
+</dict>
+</plist>

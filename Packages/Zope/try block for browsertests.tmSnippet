@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>try:
+...     $0${TM_CURRENT_LINE/^[&gt;\s]*//}
+... except:
+...     traceback = self.portal.error_log.getLogEntries()[0]['tb_text']
+...     print traceback
+...     import pdb; pdb.set_trace( )
+&gt;&gt;&gt; # original line: </string>
+	<key>name</key>
+	<string>DocTest: try block</string>
+	<key>scope</key>
+	<string>text.restructuredtext.doctest</string>
+	<key>tabTrigger</key>
+	<string>try</string>
+	<key>uuid</key>
+	<string>DE0BCCCC-8DBE-4A63-936F-5C71E83C48D4</string>
+</dict>
+</plist>

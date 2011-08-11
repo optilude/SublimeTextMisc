@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en-US" lang="en-US"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="${1:plone}"&gt;
+
+    &lt;body&gt;
+        $0
+    &lt;/body&gt;
+&lt;/html&gt;
+</string>
+	<key>name</key>
+	<string>ZPT: New Page</string>
+	<key>scope</key>
+	<string>text.html.zpt</string>
+	<key>tabTrigger</key>
+	<string>page</string>
+	<key>uuid</key>
+	<string>E3081EE9-35D8-4B3E-9C5D-7FAE7EB3723D</string>
+</dict>
+</plist>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>. "$TM_SUPPORT_PATH/lib/webpreview.sh"
+html_header "Install “Zope Helper Packages”"
+
+# documentation which links to the script above
+Markdown.pl &lt;&lt;"EOF"
+
+## What's this
+
+The Zope bundle relies on a number of external helper packages that need to be installed in your local site-packages (i.e. they can't just be included in the bundle itself.)
+
+This page will prompt you for your password in order to perform the necessary steps.
+
+Currently we ship with the following products:
+
+ * Andi Zeidler's [pdbtextmatesupport](https://svn.zitc.de/trac/pdbtextmatesupport/)
+ * Divmod's [pyflakes](http://www.divmod.org/projects/pyflakes)
+ * [Docutils](http://docutils.sourceforge.net/)
+
+## Installation
+
+&lt;div id="result"&gt;
+    
+EOF
+
+osascript -e 'do shell script "sh \"$TM_BUNDLE_SUPPORT/bin/install-packages.sh\"" with administrator privileges'
+
+
+Markdown.pl &lt;&lt;"EOF"
+
+&lt;/div&gt;
+
+Check the output above to make sure everything went smoothly.
+
+EOF
+
+
+html_footer</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^~@z</string>
+	<key>name</key>
+	<string>Install Packages</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>uuid</key>
+	<string>9C670249-C790-470F-AA84-B8C2C938BD59</string>
+</dict>
+</plist>

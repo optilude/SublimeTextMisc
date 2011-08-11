@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;$1include 
+    ${2:package="${3}"}
+    ${4:file="${5}"}
+    /&gt;
+</string>
+	<key>name</key>
+	<string>ZCML: Include</string>
+	<key>scope</key>
+	<string>text.xml.zcml</string>
+	<key>tabTrigger</key>
+	<string>&lt;include</string>
+	<key>uuid</key>
+	<string>3D08C9AC-1A7E-4C53-B7A4-B401154000FC</string>
+</dict>
+</plist>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;${1}class class="${2}"&gt;
+  ${3:&lt;${4}allow
+      ${5:attributes="${6}"}
+      ${7:interface="${8}"}/&gt;}
+  ${9:&lt;${10}factory
+      ${11:id="${12}"}
+      ${13:title="${14}"}
+      ${15:description="${16}"}/&gt;}
+  ${17:&lt;${18}implements 
+      ${19:interface="${20}"} /&gt;}
+  ${21}
+&lt;/class&gt;</string>
+	<key>name</key>
+	<string>ZCML: Class</string>
+	<key>scope</key>
+	<string>text.xml.zcml</string>
+	<key>tabTrigger</key>
+	<string>&lt;class</string>
+	<key>uuid</key>
+	<string>70A6E829-902C-4F9F-9FA8-55B933625043</string>
+</dict>
+</plist>

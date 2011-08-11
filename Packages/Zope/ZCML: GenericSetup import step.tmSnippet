@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;genericsetup:importStep
+    name="$1"
+    title="$2"
+    ${3:description="$4"}
+    handler="$5"&gt;
+  ${7:&lt;depends name="$8"/&gt;}
+&lt;/genericsetup:importStep&gt;
+</string>
+	<key>name</key>
+	<string>ZCML: GenericSetup import step</string>
+	<key>scope</key>
+	<string>text.xml.zcml</string>
+	<key>tabTrigger</key>
+	<string>&lt;import</string>
+	<key>uuid</key>
+	<string>77261E04-95C0-43CE-A258-DD00A3F80A40</string>
+</dict>
+</plist>

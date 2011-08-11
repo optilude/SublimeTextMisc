@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;genericsetup:upgradeStep
+    title="$1"
+    description="$2"
+    source="$3"
+    destination="$4"
+    handler="$5"
+    sortkey="$6"
+    profile="$7"
+    /&gt;
+</string>
+	<key>name</key>
+	<string>ZCML: GenericSetup upgrade step</string>
+	<key>scope</key>
+	<string>text.xml.zcml</string>
+	<key>tabTrigger</key>
+	<string>&lt;upgrade</string>
+	<key>uuid</key>
+	<string>4D1456C9-20A9-46E2-B19A-EA3FE57F42EF</string>
+</dict>
+</plist>

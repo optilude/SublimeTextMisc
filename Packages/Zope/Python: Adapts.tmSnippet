@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>adapts($1)</string>
+	<key>name</key>
+	<string>Python: Adapts</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>tabTrigger</key>
+	<string>ada</string>
+	<key>uuid</key>
+	<string>C60CFFAA-8B55-4AD6-A447-403D913929B8</string>
+</dict>
+</plist>

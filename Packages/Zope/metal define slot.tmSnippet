@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;metal:${1:tag} define-slot="${2:name}"&gt;
+	${0:$TM_SELECTED_TEXT}
+&lt;/metal:$1&gt;
+</string>
+	<key>name</key>
+	<string>metal:define-slot</string>
+	<key>scope</key>
+	<string>text.html.zpt</string>
+	<key>tabTrigger</key>
+	<string>taldslot</string>
+	<key>uuid</key>
+	<string>E43B0727-2200-4023-B40B-BC8D78A9761E</string>
+</dict>
+</plist>

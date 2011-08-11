@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;${1}layer name="${2}" ${3:insert-after="${4:custom}"}/&gt;
+</string>
+	<key>name</key>
+	<string>Generic Setup: skin layer</string>
+	<key>scope</key>
+	<string>text.xml.genericsetup</string>
+	<key>tabTrigger</key>
+	<string>&lt;layer</string>
+	<key>uuid</key>
+	<string>517BC6BE-D878-44AB-9A8C-F2690CA89B4B</string>
+</dict>
+</plist>

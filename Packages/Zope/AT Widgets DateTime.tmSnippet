@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>atapi.DateTimeField(
+    '$1',
+    required=${2:False},
+    searchable=${3:False},
+    default_method=DateTime,
+    languageIndependent=True,
+    storage=atapi.AnnotationStorage(),
+    widget=atapi.CalendarWidget(
+        label=_(u"$4"),
+        description=_(u"$5")
+    ),
+),</string>
+	<key>name</key>
+	<string>AT Fields DateTime</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>tabTrigger</key>
+	<string>atf</string>
+	<key>uuid</key>
+	<string>255A8B71-0C04-415C-A377-46AC7FDAEA57</string>
+</dict>
+</plist>

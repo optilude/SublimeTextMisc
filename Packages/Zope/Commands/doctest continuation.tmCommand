@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env python
+import sys, os, re
+
+l = sys.stdin.read()
+indent = l.find('&gt;&gt;&gt; ')
+if indent == -1:
+	indent = l.find('... ')
+
+# how far is the code indented after the prompt?
+indent_finder = re.compile("^\s+\.\.\. (\s*)(.*)")
+code_indent = len(indent_finder.split(l)[1])
+
+index = int(os.environ['TM_LINE_INDEX'])
+sys.stdout.write("%s\n%s... %s%s" % (l[:index],' ' * indent, ' ' * code_indent, l[index:])) 
+</string>
+	<key>fallbackInput</key>
+	<string>line</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string></string>
+	<key>name</key>
+	<string>DocTest: continuation</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>source.python.embedded.doctest.continuation</string>
+	<key>uuid</key>
+	<string>BD0B81C3-E69A-4180-A490-C0093A483DD0</string>
+</dict>
+</plist>

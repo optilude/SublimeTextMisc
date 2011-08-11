@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/bin/bash
+
+if [ -n "$TM_FILEPATH" -a -n "$TM_LINE_NUMBER" ]; then
+  path=$TM_FILEPATH
+  line=$TM_LINE_NUMBER
+else
+  path=$1
+  line=$2
+fi
+
+launch=$(ps ax | grep Zope2 | grep -v grep | python2.6 -c "import sys; parts = [x for x in sys.stdin.read().split(' ') if 'zope.conf' in x][0].split('/'); print '/'.join(parts[:-4]) + '/bin/' + parts[-3]")
+
+"$launch" reload_code
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>~@f</string>
+	<key>name</key>
+	<string>Python: mr.freeze reload code</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>uuid</key>
+	<string>C268CEEF-69EB-42CC-B5CC-4DE0FD85CAC1</string>
+</dict>
+</plist>

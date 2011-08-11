@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>pt</string>
+		<string>cpt</string>
+	</array>
+	<key>foldingStartMarker</key>
+	<string>^\s*(&lt;[^!?%/](?!.+?(/&gt;|&lt;/.+?&gt;))|&lt;[!%]--(?!.+?--%?&gt;)|&lt;%[!]?(?!.+?%&gt;))</string>
+	<key>foldingStopMarker</key>
+	<string>^\s*(&lt;/[^&gt;]+&gt;|[/%]&gt;|--&gt;)\s*$</string>
+	<key>name</key>
+	<string>ZPT</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>include</key>
+			<string>text.xml</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>text.html.zpt</string>
+	<key>uuid</key>
+	<string>4A9C6E5F-F8C6-488A-9EE1-B5F14EBC83A2</string>
+</dict>
+</plist>

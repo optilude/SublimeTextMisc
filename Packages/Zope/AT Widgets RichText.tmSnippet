@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>atapi.TextField(
+    '$1',
+    required=${2:False},
+    searchable=${3:True},
+    primary=${4:True},
+    default_output_type='text/x-html-safe',
+    storage=atapi.AnnotationStorage(),
+    widget=atapi.RichWidget(
+        label=_(u"$5"),
+        description=_(u"$6")
+    ),
+),</string>
+	<key>name</key>
+	<string>AT Fields RichText</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>tabTrigger</key>
+	<string>atf</string>
+	<key>uuid</key>
+	<string>660770BD-0DFA-478C-817F-0F59FEDCE3C9</string>
+</dict>
+</plist>

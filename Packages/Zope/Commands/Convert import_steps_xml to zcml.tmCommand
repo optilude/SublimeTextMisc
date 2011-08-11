@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env python
+import os
+from xml.dom import minidom
+from string import Template
+
+# our templates
+import_step_template = Template("""\
+  &lt;genericsetup:importStep
+      name="$name"
+      title="$title"
+      description="$description"
+      handler="$handler"&gt;""")
+depends_template = Template("""\
+    &lt;depends name="$dependency"/&gt;""")
+ending = """  &lt;/genericsetup:importStep&gt;
+"""
+
+to_convert = open(os.environ['TM_FILEPATH'])
+parsed = minidom.parse(to_convert)
+to_convert.close()
+import_steps = parsed.getElementsByTagName('import-step')
+zcmlified = []
+zcmlified.append("""&lt;configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"&gt;
+""")
+for import_step in import_steps:
+    name = import_step.getAttribute('id')
+    title = import_step.getAttribute('title')
+    handler = import_step.getAttribute('handler')
+    possible_descrip = import_step.childNodes[-1]
+    description = ""
+    if possible_descrip.nodeType == 3:
+        description = possible_descrip.nodeValue.replace("\n", " ").strip()
+    step = import_step_template.substitute(
+        name=name,
+        title=title,
+        description=description,
+        handler=handler
+    )
+    depends = import_step.getElementsByTagName('dependency')
+    if not depends:
+        step = step[:-1] + "\n      /&gt;\n"
+    zcmlified.append(step)
+    for depend in depends:
+        dependency = depend.getAttribute('step')
+        zcmlified.append(depends_template.substitute(dependency=dependency))
+    if depends:
+        zcmlified.append(ending)
+
+zcmlified.append("&lt;/configure&gt;")
+
+print '\n'.join(zcmlified)
+</string>
+	<key>input</key>
+	<string>document</string>
+	<key>name</key>
+	<string>Convert import_steps.xml to zcml</string>
+	<key>output</key>
+	<string>openAsNewDocument</string>
+	<key>scope</key>
+	<string>text.xml</string>
+	<key>uuid</key>
+	<string>F02AA403-A382-4BC6-92A4-CD452605F8B0</string>
+</dict>
+</plist>

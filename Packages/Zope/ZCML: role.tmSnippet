@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;${1}zope:role
+    ${2:id="${3}"}
+    ${4:title="${5}"}
+    /&gt;</string>
+	<key>name</key>
+	<string>ZCML: role</string>
+	<key>scope</key>
+	<string>text.xml.zcml</string>
+	<key>tabTrigger</key>
+	<string>&lt;role</string>
+	<key>uuid</key>
+	<string>60BB8FA5-593B-42A2-9A50-A3EDDFF234EC</string>
+</dict>
+</plist>

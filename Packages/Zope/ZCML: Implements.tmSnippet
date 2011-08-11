@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;$1implements interface="$2"/&gt;</string>
+	<key>name</key>
+	<string>ZCML: Implements</string>
+	<key>scope</key>
+	<string>text.xml.zcml</string>
+	<key>tabTrigger</key>
+	<string>&lt;implements</string>
+	<key>uuid</key>
+	<string>E4212920-D706-4FA1-B0FA-DBC5A9F40154</string>
+</dict>
+</plist>

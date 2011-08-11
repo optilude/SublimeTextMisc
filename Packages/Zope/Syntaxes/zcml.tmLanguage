@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>zcml</string>
+	</array>
+	<key>name</key>
+	<string>ZCML</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>include</key>
+			<string>text.xml</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>text.xml.zcml</string>
+	<key>uuid</key>
+	<string>03D7B447-9B4B-4694-A46A-DAFBEF619594</string>
+</dict>
+</plist>

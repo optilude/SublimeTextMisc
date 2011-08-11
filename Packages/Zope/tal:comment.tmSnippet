@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;tal:${1:comment} tal:condition="nothing"&gt;
+	$0
+&lt;/tal:$1&gt;
+</string>
+	<key>name</key>
+	<string>tal:comment</string>
+	<key>scope</key>
+	<string>text.html.zpt</string>
+	<key>tabTrigger</key>
+	<string>talcom</string>
+	<key>uuid</key>
+	<string>FFF125D0-271C-4BEF-81A6-81A320F29AD3</string>
+</dict>
+</plist>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;${1}viewlet
+    ${2:name="${3}"}
+    ${4:for="${5}"}
+    ${6:manager="${7}"}
+    ${8:template="${9}"}
+    ${10:layer="${11}"}
+    ${12:permission="${13}"}
+    /&gt;</string>
+	<key>name</key>
+	<string>ZCML: Viewlet</string>
+	<key>scope</key>
+	<string>text.xml.zcml</string>
+	<key>tabTrigger</key>
+	<string>&lt;viewlet</string>
+	<key>uuid</key>
+	<string>125934F2-C187-4F9A-BC76-9A46ABC894CD</string>
+</dict>
+</plist>

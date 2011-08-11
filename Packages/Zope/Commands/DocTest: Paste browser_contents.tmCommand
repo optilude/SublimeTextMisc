@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>TPY=${TM_PYTHON:-pythonw}
+
+pbpaste |\
+"$TPY" "$TM_BUNDLE_SUPPORT/bin/cleandoctestbrowsercontents.py"</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^~@V</string>
+	<key>name</key>
+	<string>DocTest: Paste browser.contents</string>
+	<key>output</key>
+	<string>openAsNewDocument</string>
+	<key>uuid</key>
+	<string>08543428-449C-442A-82F2-8F91163358ED</string>
+</dict>
+</plist>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;?xml version="1.0"?&gt;
+&lt;object name="${1}"
+  meta_type="Factory-based Type Information with dynamic views"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"&gt;
+  
+  &lt;property name="title"&gt;${1}&lt;/property&gt;
+  &lt;property name="description"&gt;${2}&lt;/property&gt;
+  &lt;property name="content_icon"&gt;folder_icon.gif&lt;/property&gt;
+  &lt;property name="content_meta_type"&gt;${1}&lt;/property&gt;
+  &lt;property name="product"&gt;${3}&lt;/property&gt;
+  &lt;property name="factory"&gt;add${1}&lt;/property&gt;
+  &lt;property name="immediate_view"&gt;folder_listing&lt;/property&gt;
+  &lt;property name="global_allow"&gt;True&lt;/property&gt;
+  &lt;property name="filter_content_types"&gt;${4}&lt;/property&gt;
+  &lt;property name="allowed_content_types"&gt;
+   ${5:&lt;element value="${6}"/&gt;}
+  &lt;/property&gt;
+  &lt;property name="allow_discussion"&gt;False&lt;/property&gt;
+  &lt;property name="default_view"&gt;${7:folder_listing}&lt;/property&gt;
+  &lt;property name="view_methods"&gt;
+   ${8:&lt;element value="${9}folder_listing"/&gt;}
+  &lt;/property&gt;
+  
+  &lt;alias from="(Default)" to="(dynamic view)"/&gt;
+  &lt;alias from="edit" to="atct_edit"/&gt;
+  &lt;alias from="index.html" to="(dynamic view)"/&gt;
+  &lt;alias from="properties" to="base_metadata"/&gt;
+  &lt;alias from="sharing" to="folder_localrole_form"/&gt;
+  &lt;alias from="view" to="(selected layout)"/&gt;
+
+  &lt;action title="View" action_id="view" category="object" condition_expr=""
+    url_expr="string:${folder_url}/" visible="True"&gt;
+    &lt;permission value="View"/&gt;
+  &lt;/action&gt;
+
+  &lt;action title="Edit" action_id="edit" category="object" condition_expr=""
+    url_expr="string:${object_url}/edit" visible="True"&gt;
+    &lt;permission value="Modify portal content"/&gt;
+  &lt;/action&gt;
+
+  &lt;action title="Properties" action_id="metadata" category="object"
+    condition_expr="" url_expr="string:${object_url}/properties"
+    visible="True"&gt;
+    &lt;permission value="Modify portal content"/&gt;
+  &lt;/action&gt;
+
+  &lt;action title="References" action_id="references" category="object"
+    condition_expr="object/archetype_tool/has_graphviz"
+    url_expr="string:${object_url}/reference_graph" visible="True"&gt;
+    &lt;permission value="Modify portal content"/&gt;
+    &lt;permission value="Review portal content"/&gt;
+  &lt;/action&gt;
+
+  &lt;action title="Folder Listing" action_id="folderlisting" category="folder"
+    condition_expr="object/isPrincipiaFolderish"
+    url_expr="string:${folder_url}/view" visible="False"&gt;
+    &lt;permission value="View"/&gt;
+  &lt;/action&gt;
+
+  &lt;action title="Sharing" action_id="local_roles" category="object"
+    condition_expr="" url_expr="string:${object_url}/sharing" visible="True"&gt;
+    &lt;permission value="Manage properties"/&gt;
+  &lt;/action&gt;
+
+  &lt;action title="State" action_id="content_status_history"
+    category="object_tabs"
+    condition_expr="python:object and portal.portal_workflow.getTransitionsFor(object, object.getParentNode())"
+    url_expr="string:$object_url/content_status_history" visible="False"&gt;
+    &lt;permission value="View"/&gt;
+  &lt;/action&gt;
+
+  &lt;action title="External Edit" action_id="external_edit" category="object"
+    condition_expr="" url_expr="string:$object_url/external_edit"
+    visible="False"&gt;
+    &lt;permission value="Modify portal content"/&gt;
+  &lt;/action&gt;
+
+&lt;/object&gt;
+</string>
+	<key>name</key>
+	<string>Generic Setup: folderish type</string>
+	<key>scope</key>
+	<string>text.xml.genericsetup</string>
+	<key>tabTrigger</key>
+	<string>&lt;ftype</string>
+	<key>uuid</key>
+	<string>DAAE6B0F-FF6D-4EE2-8066-53482874D3F5</string>
+</dict>
+</plist>

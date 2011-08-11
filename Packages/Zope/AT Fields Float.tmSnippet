@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>atapi.FloatField(
+    '$1',
+    required=${2:False},
+    storage=atapi.AnnotationStorage(),
+    widget=atapi.DecimalWidget(
+        label=_(u"$3"),
+        description=_(u"$4")
+    ),
+),</string>
+	<key>name</key>
+	<string>AT Fields Float</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>tabTrigger</key>
+	<string>atf</string>
+	<key>uuid</key>
+	<string>25B69C35-C56E-49D6-8E74-A16A545616C3</string>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;${1}role ${2:name="${3}"}/&gt;</string>
+	<key>name</key>
+	<string>Generic Setup: role</string>
+	<key>scope</key>
+	<string>text.xml.genericsetup</string>
+	<key>tabTrigger</key>
+	<string>&lt;role</string>
+	<key>uuid</key>
+	<string>981B9259-DD60-4B09-8D65-A75D405BF907</string>
+</dict>
+</plist>

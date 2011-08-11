@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>out=$( echo $TM_SELECTED_FILES | xargs pyflakes | perl -lpe 's,^(.*)/([^/]*):([0-9]*): ,&lt;a href="txmt://open?url=file://$1/$2&amp;line=$3&amp;column=1"&gt;$2:$3&lt;/a&gt;: ,' )
+echo "&lt;em&gt; validating syntax for $TM_SELECTED_FILES: &lt;/em&gt; &lt;br/&gt;"
+if [ -z "$out" ]; then
+    echo "no errors found... :)"
+else
+    echo "&lt;pre&gt;"
+    echo "$out"
+    echo "&lt;/pre&gt;"
+fi</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^V</string>
+	<key>name</key>
+	<string>Python: Validate syntax for selected files (pyflakes)</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>uuid</key>
+	<string>329AC7B6-8E58-4DB5-B2C5-E9D6103CF9B8</string>
+</dict>
+</plist>

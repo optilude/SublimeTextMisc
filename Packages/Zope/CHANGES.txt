@@ -1,0 +1,44 @@
+=======
+CHANGES
+=======
+
+vX.X? (Unreleased)
+------------------
+
+2008-11-14 (Plone Tuneup day #7)
+================================
+
+- added key command for DocTest language [tomster] 
+- pyflakes testing for doctests, explicit and 'on save' [witsch, tomster]
+
+2008-11-11
+==========
+
+-added a doctest browser preview command [tomster]
+
+Plone Conference 2008 sprint
+============================
+
+claytron sprinted on ZopeSkel:
+
+- Bringing the bundle up to date with some best practices. The AT field snippets will work in conjunction with ZopeSkel a little better now. 
+- fixed formatting of AT fields 
+- used atapi import for the ATCTContent template and field snippets 
+- added a computed field snippet 
+- fixed up some zcml to follow best practices (http://wiki.zope.org/zope3/ZCMLStyleGuide) 
+- removed tabs and fixed formatting for schema snippets 
+- added schema.<field> for the schemas so that you only need one import 
+- made the pdb tab trigger be 'pdb' instead of 'trace' 
+- changed the GS profile registration to be the ZCML 
+- added GS importStep and GS exportStep ZCML 
+- added GS upgrade step and group steps ZCML snippets 
+- removed the GenericSetup language, as it was only for a few files, and not scalable 
+- changed the pyflakes command to run on save and give you a tooltip with syntax errors (if pyflakes is not installed then nothing happens, not even a warning) 
+- reordered the snippets to be grouped a bit better 
+
+Thanks to hexsprite and limi for the motivation to fix it up :)
+
+2007 Snowsprint
+===============
+
+Initial work by tomster, witsch, opetznik and berndroessel

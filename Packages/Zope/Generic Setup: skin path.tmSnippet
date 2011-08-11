@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;${1}skin-path name="${2:Plone Default}"&gt;
+  ${3}
+&lt;/skin-path&gt;</string>
+	<key>name</key>
+	<string>Generic Setup: skin path</string>
+	<key>scope</key>
+	<string>text.xml.genericsetup</string>
+	<key>tabTrigger</key>
+	<string>&lt;skin-path</string>
+	<key>uuid</key>
+	<string>D97AF77A-B173-409F-A141-3CE258998D8C</string>
+</dict>
+</plist>

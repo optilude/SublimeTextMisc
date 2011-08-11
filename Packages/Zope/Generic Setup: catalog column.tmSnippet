@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;${1}column ${2:value="${3}"}/&gt;</string>
+	<key>name</key>
+	<string>Generic Setup: catalog column</string>
+	<key>scope</key>
+	<string>text.xml.genericsetup</string>
+	<key>tabTrigger</key>
+	<string>&lt;col</string>
+	<key>uuid</key>
+	<string>DF75A640-96CD-4711-93C3-FBFB663614BF</string>
+</dict>
+</plist>

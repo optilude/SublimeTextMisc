@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;${1}permission ${2:name="${3}"} ${4:acquire="${5}"}&gt;
+  &lt;role ${6:name="${7}"}/&gt;
+&lt;/permission&gt;</string>
+	<key>name</key>
+	<string>Generic Setup: permission</string>
+	<key>scope</key>
+	<string>text.xml.genericsetup</string>
+	<key>tabTrigger</key>
+	<string>&lt;permission</string>
+	<key>uuid</key>
+	<string>FDD9D6DA-8CD3-43DA-8038-471371A14CCB</string>
+</dict>
+</plist>

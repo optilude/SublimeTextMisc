@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;configure
+    xmlns:${1:zope}="http://namespaces.zope.org/zope"
+    xmlns:${2:browser}="http://namespaces.zope.org/browser"&gt;
+  ${3}
+&lt;/configure&gt;
+</string>
+	<key>name</key>
+	<string>ZCML: configure</string>
+	<key>scope</key>
+	<string>text.xml.zcml</string>
+	<key>tabTrigger</key>
+	<string>&lt;configure</string>
+	<key>uuid</key>
+	<string>FF62337F-60E2-419C-8352-35A164CEBCA8</string>
+</dict>
+</plist>

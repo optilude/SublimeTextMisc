@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>atapi.ReferenceField(
+    '$1',
+    allowed_types=('$2'),
+    storage=atapi.AnnotationStorage(),
+    widget=atapi.ReferenceWidget(
+        label=_(u"$3"),
+        description=_(u"$4")
+    ),
+),</string>
+	<key>name</key>
+	<string>AT Fields Reference</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>tabTrigger</key>
+	<string>atf</string>
+	<key>uuid</key>
+	<string>2CC66B03-0459-47A3-9D8B-4E8C9001655E</string>
+</dict>
+</plist>

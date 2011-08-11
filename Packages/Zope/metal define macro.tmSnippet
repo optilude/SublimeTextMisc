@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;metal:block define-macro="${1:name}"&gt;
+	${0:$TM_SELECTED_TEXT}
+&lt;/metal:block&gt;
+</string>
+	<key>name</key>
+	<string>metal:define-macro</string>
+	<key>scope</key>
+	<string>text.html.zpt</string>
+	<key>tabTrigger</key>
+	<string>taldm</string>
+	<key>uuid</key>
+	<string>AF6BC7A1-5D09-4BCD-B9F0-38E62FB82AC3</string>
+</dict>
+</plist>

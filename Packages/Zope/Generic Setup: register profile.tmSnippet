@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;genericsetup:registerProfile
+    name="$1"
+    title="$2"
+    directory="profiles/$1"
+    description="$3"
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    /&gt;</string>
+	<key>name</key>
+	<string>ZCML: register GenericSetup profile</string>
+	<key>scope</key>
+	<string>text.xml.zcml</string>
+	<key>tabTrigger</key>
+	<string>registerProfile</string>
+	<key>uuid</key>
+	<string>4838EB61-AA69-4ED5-AFF9-79CFFAC0AD14</string>
+</dict>
+</plist>

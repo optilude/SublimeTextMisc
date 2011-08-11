@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;${1}addMenuItem
+    ${2:title="${3}"}
+    ${4:description="${5}"}
+    ${6:for="${7}"}
+    ${8:factory="${9}"}
+    ${10:view="${11}"}
+    ${12:class="${13}"}
+    ${14:permission="${15}"}
+    ${16:order="${17}"}
+    ${18:filter="${19}"}
+    ${20:layer="${21}"}
+    ${22:icon="${23}"}
+    ${24:menu="${25}"}
+    /&gt;</string>
+	<key>name</key>
+	<string>ZCML: AddMenuItem</string>
+	<key>scope</key>
+	<string>text.xml.zcml</string>
+	<key>tabTrigger</key>
+	<string>&lt;addMenuItem</string>
+	<key>uuid</key>
+	<string>B7BDA232-FBE7-4A55-914C-5CDD139C9754</string>
+</dict>
+</plist>

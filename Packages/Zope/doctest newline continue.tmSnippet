@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>
+...     </string>
+	<key>keyEquivalent</key>
+	<string></string>
+	<key>name</key>
+	<string>DocTest: newline continue</string>
+	<key>scope</key>
+	<string>source.python.embedded.doctest.continuation.start</string>
+	<key>uuid</key>
+	<string>35920F33-D3A6-41A6-8C28-FDFC83E6B75E</string>
+</dict>
+</plist>

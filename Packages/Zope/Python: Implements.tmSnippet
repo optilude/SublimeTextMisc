@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>implements(${1:Interface})
+</string>
+	<key>name</key>
+	<string>Python: Implements</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>tabTrigger</key>
+	<string>impl</string>
+	<key>uuid</key>
+	<string>F38B4649-B789-4586-ABE7-C719578F9807</string>
+</dict>
+</plist>

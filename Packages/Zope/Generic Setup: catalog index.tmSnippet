@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;${1}index ${2:name="${3}"} ${4:meta_type="${5}"}&gt;
+  &lt;indexed_attr ${6:value="${7}"}/&gt;
+&lt;/index&gt;</string>
+	<key>name</key>
+	<string>Generic Setup: catalog index</string>
+	<key>scope</key>
+	<string>text.xml.genericsetup</string>
+	<key>tabTrigger</key>
+	<string>&lt;index</string>
+	<key>uuid</key>
+	<string>2E892C57-26E0-4E38-BFF9-01C41619589F</string>
+</dict>
+</plist>

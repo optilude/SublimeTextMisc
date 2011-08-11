@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;${1}object
+  name="${2}"
+  meta_type="Filesystem Directory View"
+  directory="${3}"/&gt;
+</string>
+	<key>name</key>
+	<string>Generic Setup: directory view</string>
+	<key>scope</key>
+	<string>text.xml.genericsetup</string>
+	<key>tabTrigger</key>
+	<string>&lt;object</string>
+	<key>uuid</key>
+	<string>F0FA201F-09CE-4A35-9910-CB140D5D3A44</string>
+</dict>
+</plist>
