@@ -1,0 +1,10 @@
+{
+    "color_scheme": "Packages/User/Espresso.tmTheme",
+    "font_face": "Meslo LG M",
+    "font_size": 11,
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "word_wrap": false,
+    "highlight_line": false
+    // "draw_white_space": "all"
+}

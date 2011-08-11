@@ -1,0 +1,6 @@
+// Place user-specific overrides in this file, to ensure they're preserved
+// when upgrading
+{
+	"theme": "Soda Light.sublime-theme",
+	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".*", "parts"]
+}
