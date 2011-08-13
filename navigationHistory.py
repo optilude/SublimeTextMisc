@@ -4,95 +4,100 @@ from collections import deque
 MAX_SIZE = 64
 LINE_THRESHOLD = 2
 
+class Location(object):
+    """A location in the history
+    """
+
+    def __init__(self, path, line, col):
+        self.path = path
+        self.line = line
+        self.col = col
+    
+    def __eq__(self, other):
+        return self.path == other.path and self.line == other.line
+    
+    def __ne__(self, other):
+        return not self.__eq__(other)
+    
+    def __nonzero__(self):
+        return self.path and self.line
+
+    def near(self, other):
+        return self.path == other.path and abs(self.line - other.line) <= LINE_THRESHOLD
+
+    def copy(self):
+        return Location(self.path, self.line, self.col)
+
 class History(object):
     """Keep track of the history for a single window
     """
 
     def __init__(self, max_size=MAX_SIZE):
-        self._back = deque([], max_size)
-        self._forward = deque([], max_size)
-        self._last_location = ("", -100,)
-    
-    def push(self, path, line):
-        """Push the given path and line number to indicate the
-        location has changed. Clear the forward history.
-        """
-
-        self._back.append((path, line,))
-        self._forward.clear()
-    
-    def mark_location(self, path, line):
-        """Remember the current location, for the purposes of being able
-        to do a has_changed() check.
-        """
-        self._last_location = (path, line,)
-
-    def has_changed(self, path, line):
-        """Determine if the given path/line combination
-        represents a significant enough change to warrant
-        pushing history.
-        """
-
-        old_path, old_line = self._last_location
-
-        if old_path != path:
-            return True
+        self._current = None                # current location as far as the
+                                            # history is concerned
+        self._back = deque([], max_size)    # items before self._current
+        self._forward = deque([], max_size) # items after self._current
         
-        if abs(line - old_line) > LINE_THRESHOLD:
-            return True
-        
-        return False
+        self._last_movement = None          # last recorded movement
     
-    def record_movement(self, path, line):
+    def record_movement(self, location):
         """Record movement to the given location, pushing history if
         applicable
         """
 
-        if path and line:
-            if self.has_changed(path, line):
-                self.push(path, line)
-                print "pushed", path, line, self._back, self._forward
-            self.mark_location(path, line)
+        if location:
+            if self.has_changed(location):
+                self.push(location)
+            self.mark_location(location)
 
-    def back(self, path, line):
-        """Move backward in history, returning the (path, line) tuple to
-        jump to, or (None, None) if the history is empty. Should be passed
-        the current path and line, which will be added to the forward deque.
+    def mark_location(self, location):
+        """Remember the current location, for the purposes of being able
+        to do a has_changed() check.
+        """
+        self._last_movement = location.copy()
+    
+    def has_changed(self, location):
+        """Determine if the given location combination represents a
+        significant enough change to warrant pushing history.
+        """
+
+        return self._last_movement is None or not self._last_movement.near(location)
+    
+    def push(self, location):
+        """Push the given location to the back history. Clear the forward
+        history.
+        """
+
+        if self._current is not None:
+            self._back.append(self._current.copy())
+        self._current = location.copy()
+        self._forward.clear()
+
+    def back(self):
+        """Move backward in history, returning the location to jump to.
+        Returns None if no history.
         """
 
         if not self._back:
-            return (None, None,)
+            return None
         
-        self._forward.appendleft((path, line,))
-        new_path, new_line = self._back.pop()
+        self._forward.appendleft(self._current)
+        self._current = self._back.pop()
+        self._last_movement = self._current # preempt, so we don't re-push
+        return self._current
 
-        # We may still be within the same area as the last recorded jump,
-        # in which case we really want to jump back one more
-        if new_path == path and new_line == line:
-            if self._back:
-                new_path, new_line = self._back.pop()
-        
-        self.mark_location(new_path, new_line)
-        return new_path, new_line
-
-    def forward(self, path, line):
-        """Move forward in history, returning the (path, line) tuple to
-        jump to, or (None, None) if the history is empty. Should be passed
-        the current path and line, which will be added to the back deque.
+    def forward(self):
+        """Move forward in history, returning the location to jump to.
+        Returns None if no history.
         """
 
         if not self._forward:
-            return (None, None,)
+            return None
         
-        self._back.append((path, line))
-        new_path, new_line = self._forward.popleft()
-
-        # if new_path == path and new_line == line:
-        #     if self._forward:
-        #         new_path, new_line = self._forward.popleft()
-        
-        self.mark_location(new_path, new_line)
-        return new_path, new_line
+        self._back.append(self._current)
+        self._current = self._forward.popleft()
+        self._last_movement = self._current # preempt, so we don't re-push
+        return self._current
 
 _histories = {} # window id -> History
 
@@ -125,11 +130,7 @@ class NavigationHistoryRecorder(sublime_plugin.EventListener):
 
         path = view.file_name()
         row, col = view.rowcol(view.sel()[0].a)
-        line = row + 1
-
-        # TODO: This mustn't happen when we move due to back() or
-        # forward()
-        history.record_movement(path, line)
+        history.record_movement(Location(path, row + 1, col + 1))
     
     # def on_close(self, view):
     #     """When a view is closed, check to see if the window was closed too
@@ -144,7 +145,7 @@ class NavigationHistoryRecorder(sublime_plugin.EventListener):
     #     closed_windows = windows_with_history.difference(window_ids)
     #     for window_id in closed_windows:
     #         del _histories[window_id]
-    
+
 class NavigationHistoryBack(sublime_plugin.TextCommand):
     """Go back in history
     """
@@ -154,15 +155,10 @@ class NavigationHistoryBack(sublime_plugin.TextCommand):
         if history is None:
             return
 
-        old_path = self.view.file_name()
-        row, col = self.view.rowcol(self.view.sel()[0].a)
-        old_line = row + 1
-
-        path, line = history.back(old_path, old_line)
-
-        if path is not None and line is not None:
+        location = history.back()
+        if location:
             window = sublime.active_window()
-            window.open_file("%s:%d" % (path, line,), sublime.ENCODED_POSITION)
+            window.open_file("%s:%d:%d" % (location.path, location.line, location.col), sublime.ENCODED_POSITION)
 
 class NavigationHistoryForward(sublime_plugin.TextCommand):
     """Go forward in history
@@ -173,12 +169,7 @@ class NavigationHistoryForward(sublime_plugin.TextCommand):
         if history is None:
             return
 
-        old_path = self.view.file_name()
-        row, col = self.view.rowcol(self.view.sel()[0].a)
-        old_line = row + 1
-
-        path, line = history.forward(old_path, old_line)
-
-        if path is not None and line is not None:
+        location = history.forward()
+        if location:
             window = sublime.active_window()
-            window.open_file("%s:%d" % (path, line,), sublime.ENCODED_POSITION)
+            window.open_file("%s:%d:%d" % (location.path, location.line, location.col), sublime.ENCODED_POSITION)
