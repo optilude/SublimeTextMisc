@@ -1,5 +1,6 @@
 {
     "tab_size": 4,
     "translate_tabs_to_spaces": true,
-    "detect_indentation": false
+    "detect_indentation": false,
+    "rulers": [80]
 }
