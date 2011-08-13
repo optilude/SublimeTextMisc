@@ -20,7 +20,7 @@ class Location(object):
         return not self.__eq__(other)
     
     def __nonzero__(self):
-        return self.path and self.line
+        return (self.path is not None and self.line is not None)
 
     def near(self, other):
         return self.path == other.path and abs(self.line - other.line) <= LINE_THRESHOLD
