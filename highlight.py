@@ -1,5 +1,4 @@
 import sublime, sublime_plugin
-import time
 
 key = "HighlightCurrentWord"
 
@@ -12,7 +11,9 @@ class HighlightCurrentWord(sublime_plugin.EventListener):
 
   def on_timer(self):
     sublime.set_timeout(self.on_timer, 50)
-    self.doSearch(sublime.active_window().active_view(), False)
+    window = sublime.active_window()
+    if window is not None:
+        self.doSearch(window.active_view(), False)
 
   def doSearch(self, view, force=True):
     if view == None:
