@@ -2,8 +2,6 @@ import sublime, sublime_plugin
 
 key = "HighlightCurrentWord"
 
-# The search is performed half a second after the most recent event in order to prevent the search hapenning on every keypress.
-# Each of the event handlers simply marks the time of the most recent event and a timer periodically executes doSearch
 class HighlightCurrentWord(sublime_plugin.EventListener):
   def __init__(self):
     self.previousRegion = sublime.Region(0, 0)
