@@ -1,0 +1,29 @@
+{
+	"color_scheme": "Packages/User/Monokai Soda.tmTheme",
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".*"
+	],
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"highlight.pyc",
+		"highlight.py",
+		"Case Conversion",
+		"Vintage"
+	],
+	"rulers":
+	[
+		80
+	],
+	"tab_size": 4,
+	"theme": "Soda Light.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"word_wrap": false,
+	"font_face": "Source Code Pro",
+	"font_size": 12.0
+}

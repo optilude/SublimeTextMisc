@@ -17,7 +17,7 @@
 	<array>
 		<dict>
 			<key>include</key>
-			<string>text.xml</string>
+			<string>text.html</string>
 		</dict>
 	</array>
 	<key>scopeName</key>

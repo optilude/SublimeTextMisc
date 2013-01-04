@@ -1,0 +1,4 @@
+{
+    "cmd": ["bcat", "-c", "/usr/local/bin/rst2html.py $file"],
+    "selector": "text.restructuredtext"
+}
