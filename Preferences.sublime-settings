@@ -8,22 +8,27 @@
 		"CVS",
 		".*"
 	],
+	"font_face": "Source Code Pro",
+	"font_size": 12.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
 		"highlight.pyc",
+		"Vintage",
 		"highlight.py",
-		"Case Conversion",
-		"Vintage"
+		"GitGutter",
+		"SideBarGit",
+		"navigationHistory.pyc",
+		"Case Conversion"
 	],
 	"rulers":
 	[
 		80
 	],
+	"soda_classic_tabs": true,
+	"soda_retina_fix": true,
 	"tab_size": 4,
 	"theme": "Soda Light.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"word_wrap": false,
-	"font_face": "Source Code Pro",
-	"font_size": 12.0
+	"word_wrap": false
 }

@@ -1,7 +1,7 @@
 [
     { "keys": ["super+ctrl+alt+left"], "command": "navigation_history_back"},
     { "keys": ["super+ctrl+alt+right"], "command": "navigation_history_forward"},
-    { "keys": ["super+shift+r"], "command": "reveal_in_side_bar"},
+    // { "keys": ["super+shift+r"], "command": "reveal_in_side_bar"},
 
     { "keys": ["super+c"], "command": "clipboard_history_copy"},
     { "keys": ["super+x"], "command": "clipboard_history_cut"},
